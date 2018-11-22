@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
 
 declare var Stimulsoft;
 
@@ -13,7 +14,9 @@ export class AppComponent implements OnInit {
   designer = new Stimulsoft.Designer.StiDesigner(null, 'StiViewer', false);
   report = new Stimulsoft.Report.StiReport();
 
-  constructor() {
+  constructor(
+    private data: DataService
+  ) {
     this.designer.onSaveReport = (e) => {
       console.log(e);
       this.saveReportTemplate(e.report.saveToJsonString());
@@ -21,6 +24,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.report.loadDocument(this.data.r);
+    this.designer.report = this.report;
     this.designer.renderHtml('designerContent');
   }
 
