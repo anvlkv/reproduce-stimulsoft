@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
-
-declare var Stimulsoft;
+import { Stimulsoft } from 'stimulsoft-reports-js';
 
 @Component({
   selector: 'app-root',

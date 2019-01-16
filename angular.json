@@ -23,14 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/stimulsoft/styles/stimulsoft.designer.office2013.whitegreen.css",
-              "src/stimulsoft/styles/stimulsoft.viewer.office2013.whitegreen.css"
-            ],
-            "scripts": [
-              "src/stimulsoft/stimulsoft.reports.js",
-              "src/stimulsoft/stimulsoft.viewer.js",
-              "src/stimulsoft/stimulsoft.designer.js"
+              "src/styles.css"
             ]
           },
           "configurations": {
