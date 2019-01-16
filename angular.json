@@ -24,8 +24,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/stimulsoft/styles/stimulsoft.designer.office2013.whiteblue.css",
-              "src/stimulsoft/styles/stimulsoft.viewer.office2013.whiteblue.css"
+              "src/stimulsoft/styles/stimulsoft.designer.office2013.whitegreen.css",
+              "src/stimulsoft/styles/stimulsoft.viewer.office2013.whitegreen.css"
             ],
             "scripts": [
               "src/stimulsoft/stimulsoft.reports.js",
