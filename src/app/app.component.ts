@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
-import { Stimulsoft } from 'stimulsoft-reports-js';
+
+declare var Stimulsoft;
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { Stimulsoft } from 'stimulsoft-reports-js';
 export class AppComponent implements OnInit {
   title = 'stimulsoft';
 
-  designer = new Stimulsoft.Designer.StiDesigner(null, 'StiViewer', false);
+  designer = new Stimulsoft.Designer.StiDesigner(null, 'StiDesigner', false);
+  viewer = new Stimulsoft.Viewer.StiViewer(null, 'StiViewer', false);
   report = new Stimulsoft.Report.StiReport();
 
   constructor(
@@ -25,7 +27,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.report.loadDocument(this.data.r);
     this.designer.report = this.report;
+    this.viewer.report = this.report;
     this.designer.renderHtml('designerContent');
+    this.viewer.renderHtml('viewerContent');
   }
 
   saveReportTemplate(Content) {
